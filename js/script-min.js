@@ -1,0 +1,1 @@
+$(document).ready((function(){$(".wrp_faq_item_caption").click((function(){$(this).closest(".faq_item").toggleClass("active")})),$("._js_scroll").click((function(t){t.preventDefault();var e=$(this).prop("href").split("#").pop();if(e){var o=$("#"+e);if(o.length){t.preventDefault();var i=o.offset().top;$("html,body").animate({scrollTop:i},600)}}})),Fancybox.bind(".fancybox",{})}));
