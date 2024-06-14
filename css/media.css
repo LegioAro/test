@@ -82,6 +82,8 @@
     }
     .reviews_item{
         flex-wrap: wrap;
+        position: relative;
+        overflow: hidden;
     }
     .reviews_item_image{
         width: 100%;
@@ -117,8 +119,10 @@
         margin-bottom: 20px;
     }
     .wrp_lot_item{
+        /*
         max-width: 530px;
         margin: 0 auto;
+        */
         
     }
     .lot_item_image{
@@ -268,11 +272,10 @@
         right: 0;
     }
     .lot_item_image{
-        height: 170px;
         border-radius: 0px 25px 25px 25px;
     }
     .lot_item{
-        height: 170px;
+        height: 320px;
         margin-bottom: 8px;
     }
     .join_caption1{
@@ -494,5 +497,62 @@
         margin-top: 5px;
         margin-right: 0;
     }
+    .wrp_hero_text{
+        margin-top: 8px;
+    }
+    .lang_selector{
+        top: 8px;
+        right: 8px;
+        border-radius: 6px;
+    }
+    .lang_selector_select{
+        font-size: 10px;
+    }
+    .lang_selector_select{
+        font-size: 10px;
+        padding: 8px 20px 8px 12px;
+    }
+    .lang_selector_select:after{
+        width: 8px;
+        height: 6px;
+        right: 8px;
+    }
+    .lang_selector_item{
+        font-size: 10px;
+    }
+    .lot_item_info:before{
+        background: rgba(0, 0, 0, .5);
+    }
+
 }
 
+@media (max-width: 800px) {
+    .hero_image_img{
+        width: 15px;
+        height: 15px;
+        margin-left: -9px;
+    }
+    .hero_image_text{
+        font-size: 10px;
+    }
+    .wrp_hero_image_text{
+        left: 5px;
+        bottom: 5px;
+        right: 10px;
+    }
+    .button {
+        font-size: 12px;
+        height: 32px;
+    }
+    .hero_image {
+        width: 45%;
+    }
+    .wrapper_hero_text {
+        width: 53%;
+    }
+}
+@media (max-width: 500px) {
+    .lot_item{
+        height: 170px;
+    }
+}

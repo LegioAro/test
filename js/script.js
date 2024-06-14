@@ -14,6 +14,29 @@ $(document).ready(function(){
             }
         }
     });
+
+    $( ".lang_selector" ).click(function(){
+        if($(this).hasClass("active")){
+            $( ".lang_selector_list" ).slideUp(200);
+            $( ".lang_selector" ).removeClass("active");
+        }else{
+            $( ".lang_selector_list" ).slideDown(200);
+            $( ".lang_selector" ).addClass("active");
+        }
+        
+    });
+
+    $(document).click(function (e){
+        var div = $( ".lang_selector" );
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            $( ".lang_selector_list" ).slideUp(200);
+            $( ".lang_selector" ).removeClass("active");
+        }
+    })
+
+    
+
     Fancybox.bind(".fancybox", {
         // Your custom options
     });

@@ -180,7 +180,7 @@ img{
     overflow: hidden;
 }
 .main_caption{
-    font-size: 76px;
+    font-size: 72px;
     font-weight: 500;
     text-transform: capitalize;
 }
@@ -363,20 +363,44 @@ ol{
 .lot_item:last-child{
     border-radius: 0px 0px 66px 66px;
 }
-
+.lot_item_image,
 .wrp_lot_item{
     position: relative;
+    height: 100%;
+}
+.lot_item_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .lot_item_info{
     position: absolute;
-    border-radius: 21px;
-    background: rgba(0, 0, 0, 0.03);
-    backdrop-filter: blur(13px);
+    border-radius: 20px;
+    
     bottom: 16px;
     left: 16px;
     right: 16px;
+   
+    /*
+    left: 0;
+    right: 0;
+    bottom: 0;
+    */
     box-sizing: border-box;
     padding: 10px 16px;
+    
+}
+.lot_item_info:before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content:'';
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    background: rgba(0, 0, 0, 0.03);
 }
 .lot_item_info_line{
     color: #fff;
@@ -386,6 +410,12 @@ ol{
 .lot_item_info_caption{
     font-size: 20px;
     color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.lot_item_info_lines{
+    position: relative;
+    z-index: 1;
 }
 .lot_item_info_line._colored{
     background: linear-gradient(90deg, #DE7137 0%, #F7AD87 100%);
@@ -484,6 +514,10 @@ ol{
 .reviews_item_text_val{
     font-size: 20px;
     margin-top: 30px
+}
+.reviews_item_text_val p{
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .reviews_item_caption{
     color: #000;
@@ -892,4 +926,55 @@ footer{
 }
 ._mob{
     display: none;
+}
+
+/*Langs*/
+.lang_selector{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.33);
+    border-radius: 14px;
+    cursor: pointer;
+}
+.lang_selector_select{
+    color: #fff;
+    font-size: 16px;
+    padding: 16px 40px 16px 23px;
+    position: relative;
+}
+
+.lang_selector_select:after{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 7px;
+    top: 50%;
+    margin-top: -4px;
+    right: 20px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .2s;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEyIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMS4zMzQ2IDAuNzc3ODMyTDYuMDAxMyA2LjIwOTkzTDAuNjY3OTY5IDAuNzc3ODMyIiBzdHJva2U9IndoaXRlIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==);
+    
+}
+.lang_selector.active .lang_selector_select:after{
+    transform: rotate3d( 1, 0, 0, 180deg );
+}
+
+.lang_selector_item{
+    margin-bottom: 10px;
+}
+.lang_selector_item a{
+    color:#fff;
+    text-decoration: none;
+}
+.lang_selector_list{
+    display: none;
+}
+
+
+.lot_item:first-child .lot_item_info{
+    right: 0;
 }
