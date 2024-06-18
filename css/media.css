@@ -260,11 +260,17 @@
     .lots_block {
         margin-top: 17px;
     }
+    /*
     .lot_item_info_caption{
         font-size: 16px;
     }
+    
     .lot_item_info_line{
         font-size: 10px;
+    }
+    */
+    .lot_item_info_line{
+        font-size: 14px;
     }
     .lot_item_info{
         left: 0;
@@ -522,6 +528,7 @@
     }
     .lot_item_info:before{
         background: rgba(0, 0, 0, .5);
+        border-radius: 26px;
     }
 
 }
@@ -549,6 +556,9 @@
     }
     .wrapper_hero_text {
         width: 53%;
+    }
+    .how_block_left{
+        display: none;
     }
 }
 @media (max-width: 500px) {

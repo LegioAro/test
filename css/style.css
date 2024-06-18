@@ -346,14 +346,17 @@ ol{
 /*Lots*/
 .lots_block{
     margin-top: 40px;
+    /*
     margin-left: -100px;
     margin-right: -100px;
+    */
 }
 
 .lot_item{
     width: 33%;
     overflow: hidden;
 }
+/*
 .lot_item:first-child{
     border-radius: 0px 66px 66px 0;
 }
@@ -363,6 +366,11 @@ ol{
 .lot_item:last-child{
     border-radius: 0px 0px 66px 66px;
 }
+*/
+.lot_item{
+    border-radius: 10px;
+}
+
 .lot_item_image,
 .wrp_lot_item{
     position: relative;
@@ -398,9 +406,12 @@ ol{
     left: 0;
     top: 0;
     border-radius: 20px;
-    backdrop-filter: blur(13px);
+    /*backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(13px);
     background: rgba(0, 0, 0, 0.03);
+    */
+    
+    background: rgba(0, 0, 0, .6);
 }
 .lot_item_info_line{
     color: #fff;
@@ -408,7 +419,7 @@ ol{
     margin-top: 2px;
 }
 .lot_item_info_caption{
-    font-size: 20px;
+    font-size: 22px;
     color: #fff;
     position: relative;
     z-index: 1;
@@ -418,11 +429,16 @@ ol{
     z-index: 1;
 }
 .lot_item_info_line._colored{
+    /*
     background: linear-gradient(90deg, #DE7137 0%, #F7AD87 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-style: normal;
+    */
+    color: #DE7137;
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
 
@@ -974,7 +990,8 @@ footer{
     display: none;
 }
 
-
+/*
 .lot_item:first-child .lot_item_info{
     right: 0;
 }
+*/
